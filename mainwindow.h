@@ -6,6 +6,11 @@
 #include <QLabel>
 #include <QFile>
 #include <QTextStream>
+#include <QDateTime>
+#include <QtSql/QSqlDatabase>
+
+#include "graph.h"
+#include "database.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,10 +26,13 @@ public:
     int t = 0;
 
 private slots:
-    void on_pushButton_clicked();
-    void on_pushButton_2_clicked();
+    void on_read_temperature_button_clicked();
+    void on_graph_button_clicked();
+    void on_write_button_clicked();
 
 private:
-    Ui::MainWindow *ui;    
+    Ui::MainWindow *ui;
+    Graph *graph;
+    Database *database;
 };
 #endif // MAINWINDOW_H

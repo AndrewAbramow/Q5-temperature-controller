@@ -17,12 +17,12 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="write_button">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>300</x>
       <y>250</y>
-      <width>200</width>
+      <width>100</width>
       <height>100</height>
      </rect>
     </property>
@@ -38,7 +38,7 @@
      <string>Write</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="read_temperature_button">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -56,7 +56,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Temperature</string>
+     <string>Read temperature</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -83,6 +83,27 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="graph_button">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>250</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu</family>
+      <pointsize>16</pointsize>
+      <italic>false</italic>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>Graph</string>
     </property>
    </widget>
   </widget>
