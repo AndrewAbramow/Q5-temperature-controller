@@ -17,31 +17,10 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="write_button">
+   <widget class="QPushButton" name="db_button">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>250</y>
-      <width>100</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Ubuntu</family>
-      <pointsize>16</pointsize>
-      <italic>false</italic>
-      <kerning>false</kerning>
-     </font>
-    </property>
-    <property name="text">
-     <string>Write</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="read_temperature_button">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
+      <x>200</x>
       <y>250</y>
       <width>200</width>
       <height>100</height>
@@ -56,7 +35,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Read temperature</string>
+     <string>Show DB</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -65,7 +44,7 @@
       <x>0</x>
       <y>0</y>
       <width>400</width>
-      <height>240</height>
+      <height>151</height>
      </rect>
     </property>
     <property name="font">
@@ -85,12 +64,12 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="graph_button">
+   <widget class="QPushButton" name="chart_button">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>0</x>
       <y>250</y>
-      <width>100</width>
+      <width>200</width>
       <height>100</height>
      </rect>
     </property>
@@ -103,7 +82,20 @@
      </font>
     </property>
     <property name="text">
-     <string>Graph</string>
+     <string>Show chart</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>170</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Get temperature from database</string>
     </property>
    </widget>
   </widget>

@@ -5,6 +5,8 @@
 #include <QtCharts>
 #include <QSqlTableModel>
 
+#include "database.h"
+
 namespace Ui {
 class Graph;
 }
@@ -16,8 +18,15 @@ class Graph : public QWidget
 public:
     explicit Graph(QWidget *parent = nullptr);
     ~Graph();
+    void AddPoint(QLineSeries* series);
+
+private slots:
+    void on_update_clicked();
 
 private:
+    QLineSeries *series;
+    QChart *chart;
+    QChartView *chart_view;
     Ui::Graph *ui;
 };
 

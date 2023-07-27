@@ -19,7 +19,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>300</height>
+     <height>301</height>
     </rect>
    </property>
   </widget>
@@ -27,9 +27,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>300</y>
+     <y>350</y>
      <width>200</width>
-     <height>100</height>
+     <height>50</height>
     </rect>
    </property>
    <property name="font">
@@ -47,9 +47,9 @@
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>300</y>
+     <y>350</y>
      <width>200</width>
-     <height>100</height>
+     <height>50</height>
     </rect>
    </property>
    <property name="font">
@@ -61,6 +61,46 @@
    </property>
    <property name="text">
     <string>Delete row</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_row_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>300</y>
+     <width>200</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ubuntu</family>
+     <pointsize>16</pointsize>
+     <italic>false</italic>
+    </font>
+   </property>
+   <property name="text">
+    <string>End</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_row_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>300</y>
+     <width>200</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ubuntu</family>
+     <pointsize>16</pointsize>
+     <italic>false</italic>
+    </font>
+   </property>
+   <property name="text">
+    <string>Begin</string>
    </property>
   </widget>
  </widget>
