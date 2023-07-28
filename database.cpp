@@ -24,6 +24,11 @@ Database::Database(QWidget *parent) :
     ui->tableView->setModel(model);
     this->setAttribute(Qt::WA_DeleteOnClose);
     n=0;
+    range_list<<"0"<<"2"<<"4"<<"6"<<"8";
+    ui->db_begin_box->addItems(range_list);
+    ui->db_end_box->addItems(range_list);
+    current_range_begin = "0";
+    current_range_end = "10";
 }
 
 Database::~Database()
@@ -69,7 +74,7 @@ void Database::addNewValue(float value)
 QLineSeries* Database::load()
 {
     float temp = 0;
-    query->exec("SELECT * FROM Temperature WHERE N < 6");
+    query->exec("SELECT * FROM Temperature WHERE N>="+current_range_begin+" AND N<="+current_range_end+";");
     if (!query->exec())
     {
         //qDebug()<<query->lastError();
@@ -83,4 +88,14 @@ QLineSeries* Database::load()
         qDebug()<<temp<<" - FROM DATABASE\n";
     }
     return series;
+}
+
+void Database::on_db_begin_box_currentIndexChanged(const QString &arg1)
+{
+    current_range_begin = arg1;
+}
+
+void Database::on_db_end_box_currentIndexChanged(const QString &arg2)
+{
+    current_range_end = arg2;
 }

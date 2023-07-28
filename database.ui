@@ -63,27 +63,7 @@
     <string>Delete row</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="delete_row_2">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>300</y>
-     <width>200</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Ubuntu</family>
-     <pointsize>16</pointsize>
-     <italic>false</italic>
-    </font>
-   </property>
-   <property name="text">
-    <string>End</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="add_row_2">
+  <widget class="QComboBox" name="db_begin_box">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -92,15 +72,15 @@
      <height>50</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <family>Ubuntu</family>
-     <pointsize>16</pointsize>
-     <italic>false</italic>
-    </font>
-   </property>
-   <property name="text">
-    <string>Begin</string>
+  </widget>
+  <widget class="QComboBox" name="db_end_box">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>300</y>
+     <width>200</width>
+     <height>50</height>
+    </rect>
    </property>
   </widget>
  </widget>
