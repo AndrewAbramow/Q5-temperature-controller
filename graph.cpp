@@ -45,7 +45,7 @@ void Graph::AddPoint(QLineSeries* series)
     chart_view -> setParent(ui->horizontalFrame);
 }
 
-void Graph::on_update_clicked()
+void Graph::RemoveSeries()
 {
-
+    chart->removeAllSeries();
 }

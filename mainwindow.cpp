@@ -41,6 +41,7 @@ void MainWindow::serial_receive()
 
 void MainWindow::on_chart_button_clicked()
 {
+    graph->RemoveSeries();
     graph->AddPoint(database->load());
     graph->show();
 }

@@ -19,9 +19,9 @@ public:
     explicit Graph(QWidget *parent = nullptr);
     ~Graph();
     void AddPoint(QLineSeries* series);
+    void RemoveSeries();
 
 private slots:
-    void on_update_clicked();
 
 private:
     QLineSeries *series;

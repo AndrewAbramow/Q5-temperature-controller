@@ -63,23 +63,23 @@
     <string>Delete row</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="db_begin_box">
+  <widget class="QSpinBox" name="currrent_range_begin">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>300</y>
-     <width>200</width>
-     <height>50</height>
+     <width>201</width>
+     <height>51</height>
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="db_end_box">
+  <widget class="QSpinBox" name="current_range_end">
    <property name="geometry">
     <rect>
      <x>200</x>
      <y>300</y>
-     <width>200</width>
-     <height>50</height>
+     <width>201</width>
+     <height>51</height>
     </rect>
    </property>
   </widget>
