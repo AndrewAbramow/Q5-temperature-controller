@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     qDebug()<<serial->isOpen();
     // setup graph & database
     graph = new Graph();
-    database = new Database();
+    database = new Database(graph);
 }
 
 MainWindow::~MainWindow()
@@ -41,8 +41,7 @@ void MainWindow::serial_receive()
 
 void MainWindow::on_chart_button_clicked()
 {
-    graph->RemoveSeries();
-    graph->AddPoint(database->load());
+    graph->SetSeries(database->LoadFromDB());
     graph->show();
 }
 
@@ -94,5 +93,5 @@ void MainWindow::on_write_button_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    database->load();
+    database->LoadFromDB();
 }

@@ -3,9 +3,8 @@
 
 #include <QWidget>
 #include <QtCharts>
+#include <QPixmap>
 #include <QSqlTableModel>
-
-#include "database.h"
 
 namespace Ui {
 class Graph;
@@ -18,13 +17,14 @@ class Graph : public QWidget
 public:
     explicit Graph(QWidget *parent = nullptr);
     ~Graph();
-    void AddPoint(QLineSeries* series);
-    void RemoveSeries();
+    void AddSeries(QLineSeries *series);
+    void SetSeries(QLineSeries *series);
 
 private slots:
+    void on_save_button_clicked();
 
 private:
-    QLineSeries *series;
+    QLineSeries *series_;
     QChart *chart;
     QChartView *chart_view;
     Ui::Graph *ui;

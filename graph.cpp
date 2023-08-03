@@ -20,7 +20,6 @@ Graph::Graph(QWidget *parent) :
     chart -> setTitle("Temperature");
     chart -> legend() -> setVisible(true);
     chart -> legend() -> setAlignment(Qt::AlignBottom);
-
     chart_view = new QChartView(chart);
     chart_view -> setRenderHint(QPainter::Antialiasing);
     chart_view -> setParent(ui->horizontalFrame);
@@ -31,21 +30,25 @@ Graph::~Graph()
     delete ui;
 }
 
-void Graph::AddPoint(QLineSeries* series)
+void Graph::AddSeries(QLineSeries *series)
 {
-    //series->append(QDateTime::currentDateTime().toSecsSinceEpoch(),val);
-    //series->append(33,44);
-    chart -> addSeries(series);
+    series_ = series;
+    chart -> addSeries(series_);
     chart -> createDefaultAxes();
-    chart -> setTitle("Temperature");
-    chart -> legend() -> setVisible(true);
-    chart -> legend() -> setAlignment(Qt::AlignBottom);
-    chart_view = new QChartView(chart);
-    chart_view -> setRenderHint(QPainter::Antialiasing);
-    chart_view -> setParent(ui->horizontalFrame);
+    chart_view->setChart(chart);
 }
 
-void Graph::RemoveSeries()
+void Graph::SetSeries(QLineSeries *series)
 {
-    chart->removeAllSeries();
+    series_ = series;
+    chart -> removeAllSeries();
+    chart -> addSeries(series_);
+    chart -> createDefaultAxes();
+    chart_view->setChart(chart);
+}
+
+void Graph::on_save_button_clicked()
+{
+    //date-time format naming later
+    chart_view->grab().save("graph.png");
 }

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>700</width>
-    <height>700</height>
+    <width>750</width>
+    <height>550</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,29 +18,29 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>700</width>
+     <width>750</width>
      <height>500</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout"/>
   </widget>
-  <widget class="QPushButton" name="update">
+  <widget class="QPushButton" name="save_button">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>590</y>
-     <width>700</width>
-     <height>100</height>
+     <y>500</y>
+     <width>751</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Ubuntu</family>
-     <pointsize>16</pointsize>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Update</string>
+    <string>Save</string>
    </property>
   </widget>
  </widget>
