@@ -28,22 +28,15 @@ public:
     int t = 0;
 
 private slots:
-    //void on_read_temperature_button_clicked();
-    //void on_graph_button_clicked();
-    //void on_write_button_clicked();
     void serial_receive();
-
     void on_chart_button_clicked();
-
     void on_db_button_clicked();
-
     void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
-    Graph *graph;
-    Database *database;
-    QSerialPort *serial;
-
+    Graph *graph_;
+    Database *database_;
+    QSerialPort *serial_;
 };
 #endif // MAINWINDOW_H

@@ -99,7 +99,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Save CSV</string>
+    <string>Save as *.csv</string>
    </property>
   </widget>
  </widget>

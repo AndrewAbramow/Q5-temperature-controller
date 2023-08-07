@@ -6,49 +6,46 @@ Graph::Graph(QWidget *parent) :
     ui(new Ui::Graph)
 {
     ui->setupUi(this);
-    //series = new QLineSeries();
-    //series->append(0,6);
-    //series->append(2,4);
-    //series->append(3,8);
-    //series->append(7,4);
-    //series->append(10,5);
-    //*series<<QPoint(11,1)<<QPoint(13,3)<<QPoint(17,6)<<QPoint(18,3)<<QPoint(20,2);
-
-    chart = new QChart();
+    chart_ = new QChart();
     //chart -> addSeries(series);
-    chart -> createDefaultAxes();
-    chart -> setTitle("Temperature");
-    chart -> legend() -> setVisible(true);
-    chart -> legend() -> setAlignment(Qt::AlignBottom);
-    chart_view = new QChartView(chart);
-    chart_view -> setRenderHint(QPainter::Antialiasing);
-    chart_view -> setParent(ui->horizontalFrame);
+    chart_ -> createDefaultAxes();
+    chart_ -> setTitle("Temperature");
+    chart_ -> legend() -> setVisible(true);
+    chart_ -> legend() -> setAlignment(Qt::AlignBottom);
+    chart_view_ = new QChartView(chart_);
+    chart_view_ -> setRenderHint(QPainter::Antialiasing);
+    chart_view_ -> setParent(ui->horizontalFrame);
 }
 
 Graph::~Graph()
 {
+    //delete series_;
+    //delete chart_;
+    //delete chart_view_;
     delete ui;
+    qDebug()<<"Graph deleted\n";
 }
 
 void Graph::AddSeries(QLineSeries *series)
 {
     series_ = series;
-    chart -> addSeries(series_);
-    chart -> createDefaultAxes();
-    chart_view->setChart(chart);
+    chart_ -> addSeries(series_);
+    chart_ -> createDefaultAxes();
+    chart_view_->setChart(chart_);
 }
 
 void Graph::SetSeries(QLineSeries *series)
 {
     series_ = series;
-    chart -> removeAllSeries();
-    chart -> addSeries(series_);
-    chart -> createDefaultAxes();
-    chart_view->setChart(chart);
+    chart_ -> removeAllSeries();
+    chart_ -> addSeries(series_);
+    chart_ -> createDefaultAxes();
+    chart_view_->setChart(chart_);
 }
 
 void Graph::on_save_button_clicked()
 {
-    //date-time format naming later
-    chart_view->grab().save("graph.png");
+    QDateTime curr_date = QDateTime::currentDateTime();
+    QString s_date = curr_date.toString("dd.MM.yyyy hh:mm:ss");
+    chart_view_->grab().save(s_date+".png");
 }

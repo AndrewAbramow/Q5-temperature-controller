@@ -25,8 +25,8 @@ private slots:
 
 private:
     QLineSeries *series_;
-    QChart *chart;
-    QChartView *chart_view;
+    QChart *chart_;
+    QChartView *chart_view_;
     Ui::Graph *ui;
 };
 

@@ -7,91 +7,52 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     // setup serial
-    serial = new QSerialPort(this);
-    serial->setPortName("ttyUSB0");
-    serial->setBaudRate(QSerialPort::Baud9600);
-    serial->setParity(QSerialPort::NoParity);
-    serial->setStopBits(QSerialPort::OneStop);
-    serial->setFlowControl(QSerialPort::NoFlowControl);
-    serial->open((QIODevice::ReadOnly));
-    connect(serial, SIGNAL(readyRead()), this, SLOT(serial_receive()));
-    qDebug()<<serial->isOpen();
+    serial_ = new QSerialPort(this);
+    serial_->setPortName("ttyUSB0");
+    serial_->setBaudRate(QSerialPort::Baud9600);
+    serial_->setParity(QSerialPort::NoParity);
+    serial_->setStopBits(QSerialPort::OneStop);
+    serial_->setFlowControl(QSerialPort::NoFlowControl);
+    serial_->open((QIODevice::ReadOnly));
+    connect(serial_, SIGNAL(readyRead()), this, SLOT(serial_receive()));
+    qDebug()<<"Serial port: "<<serial_->isOpen();
     // setup graph & database
-    graph = new Graph();
-    database = new Database(graph);
+    graph_ = new Graph();
+    database_ = new Database(graph_);
+    //this->setAttribute(Qt::WA_DeleteOnClose);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    serial->close();
-    delete serial;
+    serial_->close();
+    delete serial_;
+    delete graph_;
+    delete database_;
+    qDebug("Main window deleted\n");
 }
 
 void MainWindow::serial_receive()
 {
     QByteArray ba;
-    ba = serial->readAll();
+    ba = serial_->readAll();
     ui->label->setText("Temperature: " + ba);
-    //database->addNewValue(ba.toFloat()); // FOR NOW
-    //float t = ba.toFloat();
-    //graph->AddPoint(t);
+    //database->AddNewValue(ba.toFloat()); // FOR NOW
     qDebug()<<ba;
 }
 
 void MainWindow::on_chart_button_clicked()
 {
-    graph->SetSeries(database->LoadFromDB());
-    graph->show();
+    graph_->SetSeries(database_->LoadFromDB());
+    graph_->show();
 }
 
 void MainWindow::on_db_button_clicked()
 {
-    database->show();
+    database_->show();
 }
-
-/*
-void MainWindow::on_read_temperature_button_clicked()
-{
-    qDebug()<<"20 degrees\n";
-    //ui->label->setText("20 degrees");
-
-    //database = new Database();
-    //database->show();
-    foreach(const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
-    {
-        qDebug()<<"Port name: "<<info.portName()<<"\n";
-    }
-}
-*/
-/*
-void MainWindow::on_graph_button_clicked()
-{
-    //graph = new Graph();
-    graph->show();
-}
-*/
-/*
-void MainWindow::on_write_button_clicked()
-{
-    qDebug()<<"Text written\n";
-    ui->label->setText("Text written");
-    QFile file("/home/andrew/RaspberryPiTemplate/log.txt");
-    QDateTime curr_date = QDateTime::currentDateTime();
-    QString string_date = curr_date.toString("dd.MM.yyyy hh:mm:ss");
-    if (file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text))
-    {
-        QTextStream stream(&file);
-        stream<<string_date<<": temperature is "<<t<<"\n";
-    }
-    else
-    {
-        qDebug()<<"Can't find this file\n";
-    }
-    file.close();
-}*/
 
 void MainWindow::on_pushButton_clicked()
 {
-    database->LoadFromDB();
+    database_->LoadFromDB();
 }

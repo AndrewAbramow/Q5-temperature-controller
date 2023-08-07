@@ -32,30 +32,24 @@ public:
 
 private slots:
     void on_add_row_clicked();
-
     void on_delete_row_clicked();
-
     void on_tableView_clicked(const QModelIndex &index);
-
     void on_currrent_range_begin_valueChanged(int arg1);
-
     void on_current_range_end_valueChanged(int arg1);
-
     void on_save_csv_clicked();
 
 private:
     Ui::Database *ui;
-    QSqlDatabase db;
-    QSqlQuery *query;
-    QStandardItem *item;
-    QStandardItemModel *model_std;
-    QSqlTableModel *model;
-    QStringList range_list;
+    QSqlDatabase db_;
+    QSqlQuery *query_;
+    QSqlTableModel *model_;
+    QStandardItemModel *model_std_;
+    QStandardItem *item_;
     Graph *graph_;
-    int current_range_begin;
-    int current_range_end;
-    int row;
-    int n;
+    int current_range_begin_;
+    int current_range_end_;
+    int row_;
+    int n_;
 };
 
 #endif // DATABASE_H
