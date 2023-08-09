@@ -1,0 +1,184 @@
+\hypertarget{class_database}{}\doxysection{Database Class Reference}
+\label{class_database}\index{Database@{Database}}
+
+
+SQLite database controller.  
+
+
+
+
+{\ttfamily \#include $<$database.\+h$>$}
+
+Inheritance diagram for Database\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_database}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_database_a39ece8253b14086ffacbd172725de54c}\label{class_database_a39ece8253b14086ffacbd172725de54c}} 
+{\bfseries Database} (\mbox{\hyperlink{class_graph}{Graph}} $\ast$graph, QWidget $\ast$parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_database_ac3ffcb93bcb3c6e856ae0de039a7d0da}{Add\+New\+Value}} (QString value)
+\begin{DoxyCompactList}\small\item\em Add new value to database. \end{DoxyCompactList}\item 
+QLine\+Series $\ast$ \mbox{\hyperlink{class_database_afed8fe2d90951f94d40acfbb320bd5b3}{Load\+From\+DB}} ()
+\item 
+void \mbox{\hyperlink{class_database_a4880b2fe48858fafaacfe8095add1fd9}{Set\+Range}} ()
+\item 
+QString \mbox{\hyperlink{class_database_a4c07242f8a6bc7735f613fce917543fd}{Get\+Latest\+Temp}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_database_aa553ce6468b7a496aacda30341db7f11}{on\+\_\+add\+\_\+row\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_database_ad6daab078f92bede5d8796dcab4a0855}{on\+\_\+delete\+\_\+row\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_database_ad8f8d8a02264c404ff2926f952f5ef03}{on\+\_\+table\+View\+\_\+clicked}} (const QModel\+Index \&index)
+\item 
+void \mbox{\hyperlink{class_database_a8b199f77221778b30e95c5bf3628971d}{on\+\_\+currrent\+\_\+range\+\_\+begin\+\_\+value\+Changed}} (int arg1)
+\item 
+void \mbox{\hyperlink{class_database_a9a8daf56efb4a5f8736e18d421d7a11c}{on\+\_\+current\+\_\+range\+\_\+end\+\_\+value\+Changed}} (int arg1)
+\item 
+void \mbox{\hyperlink{class_database_ad2bd6ae71bd29cfc394bdb94f1839176}{on\+\_\+save\+\_\+csv\+\_\+clicked}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_database_a850d0d14f0cac9692d3df576039257da}\label{class_database_a850d0d14f0cac9692d3df576039257da}} 
+Ui\+::\+Database $\ast$ {\bfseries ui}
+\item 
+\mbox{\Hypertarget{class_database_ae989c88af419827a3a2ff7688b7d1c65}\label{class_database_ae989c88af419827a3a2ff7688b7d1c65}} 
+QSql\+Database {\bfseries db\+\_\+}
+\item 
+\mbox{\Hypertarget{class_database_a0c501f64322426c4e9f109bbdf55da7c}\label{class_database_a0c501f64322426c4e9f109bbdf55da7c}} 
+QSql\+Query $\ast$ {\bfseries query\+\_\+}
+\item 
+\mbox{\Hypertarget{class_database_a3095a5d1cec71ff2dbc005609d2a5f79}\label{class_database_a3095a5d1cec71ff2dbc005609d2a5f79}} 
+QSql\+Table\+Model $\ast$ {\bfseries model\+\_\+}
+\item 
+\mbox{\Hypertarget{class_database_a80434423f096ca6e3bc0bca70c1660c7}\label{class_database_a80434423f096ca6e3bc0bca70c1660c7}} 
+QStandard\+Item\+Model $\ast$ {\bfseries model\+\_\+std\+\_\+}
+\item 
+\mbox{\Hypertarget{class_database_a1532baae386bb1132c9587b2bc6410ce}\label{class_database_a1532baae386bb1132c9587b2bc6410ce}} 
+QStandard\+Item $\ast$ {\bfseries item\+\_\+}
+\item 
+\mbox{\Hypertarget{class_database_ad75802fd2cf496af72a9fbf7a7110e89}\label{class_database_ad75802fd2cf496af72a9fbf7a7110e89}} 
+\mbox{\hyperlink{class_graph}{Graph}} $\ast$ {\bfseries graph\+\_\+}
+\item 
+int \mbox{\hyperlink{class_database_ad528fe82117a144f1bdf18e8757b0a22}{current\+\_\+range\+\_\+begin\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_database_ab821a5725861bc15f0a6cdd54f21b8cf}{current\+\_\+range\+\_\+end\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_database_a834d89b1ba0174b15c900204a1636ef7}{row\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{class_database_aa96179a1449a23eaf6d86ef2d8b48689}{n\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+SQLite database controller. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_database_ac3ffcb93bcb3c6e856ae0de039a7d0da}\label{class_database_ac3ffcb93bcb3c6e856ae0de039a7d0da}} 
+\index{Database@{Database}!AddNewValue@{AddNewValue}}
+\index{AddNewValue@{AddNewValue}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{AddNewValue()}{AddNewValue()}}
+{\footnotesize\ttfamily void Database\+::\+Add\+New\+Value (\begin{DoxyParamCaption}\item[{QString}]{value }\end{DoxyParamCaption})}
+
+
+
+Add new value to database. 
+
+Table structure\+: ~\newline
+N(-\/um) INTEGER,~\newline
+D(-\/ate) TEXT (date format\+: dd.\+MM.\+yyyy hh\+:mm\+:ss),~\newline
+T(-\/emperature) REAL \mbox{\Hypertarget{class_database_a4c07242f8a6bc7735f613fce917543fd}\label{class_database_a4c07242f8a6bc7735f613fce917543fd}} 
+\index{Database@{Database}!GetLatestTemp@{GetLatestTemp}}
+\index{GetLatestTemp@{GetLatestTemp}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{GetLatestTemp()}{GetLatestTemp()}}
+{\footnotesize\ttfamily QString Database\+::\+Get\+Latest\+Temp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the last measured temperature \mbox{\Hypertarget{class_database_afed8fe2d90951f94d40acfbb320bd5b3}\label{class_database_afed8fe2d90951f94d40acfbb320bd5b3}} 
+\index{Database@{Database}!LoadFromDB@{LoadFromDB}}
+\index{LoadFromDB@{LoadFromDB}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{LoadFromDB()}{LoadFromDB()}}
+{\footnotesize\ttfamily QLine\+Series $\ast$ Database\+::\+Load\+From\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get temperature data for charting \mbox{\Hypertarget{class_database_aa553ce6468b7a496aacda30341db7f11}\label{class_database_aa553ce6468b7a496aacda30341db7f11}} 
+\index{Database@{Database}!on\_add\_row\_clicked@{on\_add\_row\_clicked}}
+\index{on\_add\_row\_clicked@{on\_add\_row\_clicked}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{on\_add\_row\_clicked}{on\_add\_row\_clicked}}
+{\footnotesize\ttfamily void Database\+::on\+\_\+add\+\_\+row\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Add new row to database \mbox{\Hypertarget{class_database_a9a8daf56efb4a5f8736e18d421d7a11c}\label{class_database_a9a8daf56efb4a5f8736e18d421d7a11c}} 
+\index{Database@{Database}!on\_current\_range\_end\_valueChanged@{on\_current\_range\_end\_valueChanged}}
+\index{on\_current\_range\_end\_valueChanged@{on\_current\_range\_end\_valueChanged}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{on\_current\_range\_end\_valueChanged}{on\_current\_range\_end\_valueChanged}}
+{\footnotesize\ttfamily void Database\+::on\+\_\+current\+\_\+range\+\_\+end\+\_\+value\+Changed (\begin{DoxyParamCaption}\item[{int}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Max range value change handler \mbox{\Hypertarget{class_database_a8b199f77221778b30e95c5bf3628971d}\label{class_database_a8b199f77221778b30e95c5bf3628971d}} 
+\index{Database@{Database}!on\_currrent\_range\_begin\_valueChanged@{on\_currrent\_range\_begin\_valueChanged}}
+\index{on\_currrent\_range\_begin\_valueChanged@{on\_currrent\_range\_begin\_valueChanged}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{on\_currrent\_range\_begin\_valueChanged}{on\_currrent\_range\_begin\_valueChanged}}
+{\footnotesize\ttfamily void Database\+::on\+\_\+currrent\+\_\+range\+\_\+begin\+\_\+value\+Changed (\begin{DoxyParamCaption}\item[{int}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Min range value change handler \mbox{\Hypertarget{class_database_ad6daab078f92bede5d8796dcab4a0855}\label{class_database_ad6daab078f92bede5d8796dcab4a0855}} 
+\index{Database@{Database}!on\_delete\_row\_clicked@{on\_delete\_row\_clicked}}
+\index{on\_delete\_row\_clicked@{on\_delete\_row\_clicked}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{on\_delete\_row\_clicked}{on\_delete\_row\_clicked}}
+{\footnotesize\ttfamily void Database\+::on\+\_\+delete\+\_\+row\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Delete selected row from database \mbox{\Hypertarget{class_database_ad2bd6ae71bd29cfc394bdb94f1839176}\label{class_database_ad2bd6ae71bd29cfc394bdb94f1839176}} 
+\index{Database@{Database}!on\_save\_csv\_clicked@{on\_save\_csv\_clicked}}
+\index{on\_save\_csv\_clicked@{on\_save\_csv\_clicked}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{on\_save\_csv\_clicked}{on\_save\_csv\_clicked}}
+{\footnotesize\ttfamily void Database\+::on\+\_\+save\+\_\+csv\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Save current table as $\ast$.csv \mbox{\Hypertarget{class_database_ad8f8d8a02264c404ff2926f952f5ef03}\label{class_database_ad8f8d8a02264c404ff2926f952f5ef03}} 
+\index{Database@{Database}!on\_tableView\_clicked@{on\_tableView\_clicked}}
+\index{on\_tableView\_clicked@{on\_tableView\_clicked}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{on\_tableView\_clicked}{on\_tableView\_clicked}}
+{\footnotesize\ttfamily void Database\+::on\+\_\+table\+View\+\_\+clicked (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Get the number of the selected row \mbox{\Hypertarget{class_database_a4880b2fe48858fafaacfe8095add1fd9}\label{class_database_a4880b2fe48858fafaacfe8095add1fd9}} 
+\index{Database@{Database}!SetRange@{SetRange}}
+\index{SetRange@{SetRange}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{SetRange()}{SetRange()}}
+{\footnotesize\ttfamily void Database\+::\+Set\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sets min and max N for database output 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_database_ad528fe82117a144f1bdf18e8757b0a22}\label{class_database_ad528fe82117a144f1bdf18e8757b0a22}} 
+\index{Database@{Database}!current\_range\_begin\_@{current\_range\_begin\_}}
+\index{current\_range\_begin\_@{current\_range\_begin\_}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{current\_range\_begin\_}{current\_range\_begin\_}}
+{\footnotesize\ttfamily int Database\+::current\+\_\+range\+\_\+begin\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Min range value \mbox{\Hypertarget{class_database_ab821a5725861bc15f0a6cdd54f21b8cf}\label{class_database_ab821a5725861bc15f0a6cdd54f21b8cf}} 
+\index{Database@{Database}!current\_range\_end\_@{current\_range\_end\_}}
+\index{current\_range\_end\_@{current\_range\_end\_}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{current\_range\_end\_}{current\_range\_end\_}}
+{\footnotesize\ttfamily int Database\+::current\+\_\+range\+\_\+end\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Max range value \mbox{\Hypertarget{class_database_aa96179a1449a23eaf6d86ef2d8b48689}\label{class_database_aa96179a1449a23eaf6d86ef2d8b48689}} 
+\index{Database@{Database}!n\_@{n\_}}
+\index{n\_@{n\_}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{n\_}{n\_}}
+{\footnotesize\ttfamily unsigned int Database\+::n\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Current measure number \mbox{\Hypertarget{class_database_a834d89b1ba0174b15c900204a1636ef7}\label{class_database_a834d89b1ba0174b15c900204a1636ef7}} 
+\index{Database@{Database}!row\_@{row\_}}
+\index{row\_@{row\_}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{row\_}{row\_}}
+{\footnotesize\ttfamily int Database\+::row\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Selected row number 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+database.\+h\item 
+database.\+cpp\end{DoxyCompactItemize}

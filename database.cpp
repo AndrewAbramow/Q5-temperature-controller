@@ -24,7 +24,7 @@ Database::Database(Graph *graph, QWidget *parent) :
     model_->select();
     model_std_ = new QStandardItemModel;
     ui->tableView->setModel(model_);
-    n_=0;
+    n_= 0;
     current_range_begin_ = 0;
     current_range_end_ = 20;
     row_ = 0;
@@ -32,11 +32,6 @@ Database::Database(Graph *graph, QWidget *parent) :
 
 Database::~Database()
 {
-    //query_->clear();
-    //item_->clearData();
-    //model_->clear();
-    //model_std_->clear();
-    //delete graph_;// the graph object will be removed from the main
     delete ui;
     qDebug("Database deleted\n");
 }
@@ -61,19 +56,35 @@ void Database::on_tableView_clicked(const QModelIndex &index)
     row_ = index.row();
 }
 
-void Database::AddNewValue(float value)
+void Database::AddNewValue(QString value)
 {
-    QString s_n = QString::number(n_);  // try int
-    QString s_value = QString::number(value); // try float
     QDateTime curr_date = QDateTime::currentDateTime();
-    QString s_date = curr_date.toString("dd.MM.yyyy hh:mm:ss");
-    query_->exec("INSERT INTO Temperature(N, D, T)VALUES('" + s_n + "','" + s_date + "','" + s_value + "')");
-    n_+=2;
+    QString query = "INSERT INTO Temperature(N, D, T)VALUES('"
+            + QString::number(n_) + "','"
+            + curr_date.toString("dd.MM.yyyy hh:mm:ss") + "','"
+            + value + "')";
+    //qDebug()<<query;
+    query_->exec(query);
+    if (n_+1 > n_) ++n_;
+}
+
+QString Database::GetLatestTemp()
+{
+    QString latest_temp;
+    query_->exec("SELECT * FROM Temperature WHERE N=="+QString::number(n_)+";");
+    if (!query_->exec())
+    {
+        //qDebug()<<query->lastError();
+    }
+    while (query_->next())
+    {
+        latest_temp = query_->value(2).toString();
+    }
+    return latest_temp;
 }
 
 QLineSeries* Database::LoadFromDB()
 {
-    float temp = 0;
     query_->exec("SELECT * FROM Temperature WHERE N>="+QString::number(current_range_begin_)+" AND N<="+QString::number(current_range_end_)+";");
     if (!query_->exec())
     {
@@ -83,8 +94,6 @@ QLineSeries* Database::LoadFromDB()
     while (query_->next())
     {
         series->append(query_->value(0).toInt(),query_->value(2).toFloat());
-        temp = query_->value(2).toFloat();
-        QString s = QString::number(temp);
     }
     return series;
 }
@@ -129,7 +138,7 @@ void Database::on_current_range_end_valueChanged(int arg1)
 
 void Database::on_save_csv_clicked()
 {
-    QFile file("/home/andrew/RaspberryPiTemplate/csv_database.csv");
+    QFile file("./csv_database.csv");
     if (file.open(QFile::WriteOnly | QIODevice::Append))
     {
         QTextStream output(&file);
@@ -143,7 +152,7 @@ void Database::on_save_csv_clicked()
             output<<query_->value(0).toInt()<<','<<query_->value(1).toString()<<','<<query_->value(2).toFloat()<<'\n';
         }
     } else {
-        qDebug()<<"Can't find csv file\n";
+        qDebug()<<"Can't open csv file\n";
     }
     file.close();
 }

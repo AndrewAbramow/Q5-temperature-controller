@@ -1,0 +1,58 @@
+\hypertarget{mainwindow_8h_source}{}\doxysection{mainwindow.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QTextStream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QtSql/QSqlDatabase>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QtSerialPort/QSerialPort>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtSerialPort/QSerialPortInfo>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}graph.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}database.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}dialog.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00047\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00048\ \textcolor{keyword}{namespace\ }Ui\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};\ \}}
+\DoxyCodeLine{00049\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_main_window}{\string~MainWindow}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ t\ =\ 0;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a928ac57bb2e22107aab126a18d22e5f0}{serial\_receive}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aea2a4fe4b7326214987c9efaeb9550b0}{on\_chart\_button\_clicked}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a81833e19053b7c30db07f639c7793e21}{on\_db\_button\_clicked}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4de79c63c7fa0b8d7c468ac71f20be81}{on\_pushButton\_clicked}}();\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00079\ \ \ \ \ Ui::MainWindow\ *ui;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ *\mbox{\hyperlink{class_main_window_a7773d219479e9c6c82cb4546039ec2f2}{graph\_}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{class_database}{Database}}\ *\mbox{\hyperlink{class_main_window_ab2a0cb1b405f45fcc0e159b0e8d5068a}{database\_}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00088\ \ \ \ \ QSerialPort\ *\mbox{\hyperlink{class_main_window_a7a9f31b506517520f8f177d81127d26f}{serial\_}};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{class_dialog}{Dialog}}\ *\mbox{\hyperlink{class_main_window_a01a9ceb294377d8ead91102bf000d083}{dialog\_}};}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

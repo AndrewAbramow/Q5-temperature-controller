@@ -19,9 +19,6 @@ Graph::Graph(QWidget *parent) :
 
 Graph::~Graph()
 {
-    //delete series_;
-    //delete chart_;
-    //delete chart_view_;
     delete ui;
     qDebug()<<"Graph deleted\n";
 }

@@ -1,0 +1,66 @@
+\hypertarget{class_fortune_server}{}\doxysection{Fortune\+Server Class Reference}
+\label{class_fortune_server}\index{FortuneServer@{FortuneServer}}
+Inheritance diagram for Fortune\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fortune_server}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_fortune_server_a992a45495b8d9c00f5be1d270c6e328f}\label{class_fortune_server_a992a45495b8d9c00f5be1d270c6e328f}} 
+{\bfseries Fortune\+Server} (QObject $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \mbox{[}0\mbox{]} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fortune_server_a15e7a2c70411a138dcf8ef53f3e793ca}{Update\+Temperature}} (QString t)
+\begin{DoxyCompactList}\small\item\em \mbox{[}1\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_fortune_server_a9bd3c0960592706c3082d3493349e7c1}{incoming\+Connection}} (qintptr socket\+Descriptor) override
+\begin{DoxyCompactList}\small\item\em \mbox{[}0\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{class_fortune_server_a2692b2debd1026420afa49eb6efd6cd0}{current\+\_\+temperature\+\_\+}} =\char`\"{}No availible data\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fortune_server_a9bd3c0960592706c3082d3493349e7c1}\label{class_fortune_server_a9bd3c0960592706c3082d3493349e7c1}} 
+\index{FortuneServer@{FortuneServer}!incomingConnection@{incomingConnection}}
+\index{incomingConnection@{incomingConnection}!FortuneServer@{FortuneServer}}
+\doxysubsubsection{\texorpdfstring{incomingConnection()}{incomingConnection()}}
+{\footnotesize\ttfamily void Fortune\+Server\+::incoming\+Connection (\begin{DoxyParamCaption}\item[{qintptr}]{socket\+Descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+\mbox{[}0\mbox{]} 
+
+The current temperature is sent after each incoming connection
+
+\mbox{[}1\mbox{]} \mbox{\Hypertarget{class_fortune_server_a15e7a2c70411a138dcf8ef53f3e793ca}\label{class_fortune_server_a15e7a2c70411a138dcf8ef53f3e793ca}} 
+\index{FortuneServer@{FortuneServer}!UpdateTemperature@{UpdateTemperature}}
+\index{UpdateTemperature@{UpdateTemperature}!FortuneServer@{FortuneServer}}
+\doxysubsubsection{\texorpdfstring{UpdateTemperature()}{UpdateTemperature()}}
+{\footnotesize\ttfamily void Fortune\+Server\+::\+Update\+Temperature (\begin{DoxyParamCaption}\item[{QString}]{t }\end{DoxyParamCaption})}
+
+
+
+\mbox{[}1\mbox{]} 
+
+Temperature is updated every serial session 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_fortune_server_a2692b2debd1026420afa49eb6efd6cd0}\label{class_fortune_server_a2692b2debd1026420afa49eb6efd6cd0}} 
+\index{FortuneServer@{FortuneServer}!current\_temperature\_@{current\_temperature\_}}
+\index{current\_temperature\_@{current\_temperature\_}!FortuneServer@{FortuneServer}}
+\doxysubsubsection{\texorpdfstring{current\_temperature\_}{current\_temperature\_}}
+{\footnotesize\ttfamily QString Fortune\+Server\+::current\+\_\+temperature\+\_\+ =\char`\"{}No availible data\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+Current temperature to send to clients 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+fortuneserver.\+h\item 
+fortuneserver.\+cpp\end{DoxyCompactItemize}

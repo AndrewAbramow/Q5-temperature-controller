@@ -21,7 +21,7 @@
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>250</y>
+      <y>160</y>
       <width>200</width>
       <height>100</height>
      </rect>
@@ -68,7 +68,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>250</y>
+      <y>160</y>
       <width>200</width>
       <height>100</height>
      </rect>
@@ -83,6 +83,25 @@
     </property>
     <property name="text">
      <string>Show chart</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>260</y>
+      <width>401</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Start server</string>
     </property>
    </widget>
   </widget>

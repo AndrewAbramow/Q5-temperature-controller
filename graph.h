@@ -10,6 +10,7 @@ namespace Ui {
 class Graph;
 }
 
+//! Colored graph drawer
 class Graph : public QWidget
 {
     Q_OBJECT
@@ -17,10 +18,16 @@ class Graph : public QWidget
 public:
     explicit Graph(QWidget *parent = nullptr);
     ~Graph();
+
+    /*! Add temperature data to an existing set */
     void AddSeries(QLineSeries *series);
+
+    /*! Clear dataset and add new temperature data */
     void SetSeries(QLineSeries *series);
 
 private slots:
+    
+    /*! Save current plot as *.png */
     void on_save_button_clicked();
 
 private:

@@ -1,0 +1,77 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+Colored graph drawer.  
+
+
+
+
+{\ttfamily \#include $<$graph.\+h$>$}
+
+Inheritance diagram for Graph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_a300165322c32ba400d3ad41a0a3628be}\label{class_graph_a300165322c32ba400d3ad41a0a3628be}} 
+{\bfseries Graph} (QWidget $\ast$parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_graph_a52963bd87f7a31626da0e78dd6109e72}{Add\+Series}} (QLine\+Series $\ast$series)
+\item 
+void \mbox{\hyperlink{class_graph_a52556a6e51461ae0a81ea92886aab374}{Set\+Series}} (QLine\+Series $\ast$series)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_graph_a2c4511061b65dd9dfd346f874fea7823}{on\+\_\+save\+\_\+button\+\_\+clicked}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_a04a5726261c62251f434bde25aa756d9}\label{class_graph_a04a5726261c62251f434bde25aa756d9}} 
+QLine\+Series $\ast$ {\bfseries series\+\_\+}
+\item 
+\mbox{\Hypertarget{class_graph_aa380a014e8a4c4f722fcc99ebe4ccb87}\label{class_graph_aa380a014e8a4c4f722fcc99ebe4ccb87}} 
+QChart $\ast$ {\bfseries chart\+\_\+}
+\item 
+\mbox{\Hypertarget{class_graph_a6e9a2061e5cadf19adf4fe624b2af0ff}\label{class_graph_a6e9a2061e5cadf19adf4fe624b2af0ff}} 
+QChart\+View $\ast$ {\bfseries chart\+\_\+view\+\_\+}
+\item 
+\mbox{\Hypertarget{class_graph_a8eb5421f0a9e89fe81cdf64cd941dcb9}\label{class_graph_a8eb5421f0a9e89fe81cdf64cd941dcb9}} 
+Ui\+::\+Graph $\ast$ {\bfseries ui}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Colored graph drawer. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a52963bd87f7a31626da0e78dd6109e72}\label{class_graph_a52963bd87f7a31626da0e78dd6109e72}} 
+\index{Graph@{Graph}!AddSeries@{AddSeries}}
+\index{AddSeries@{AddSeries}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{AddSeries()}{AddSeries()}}
+{\footnotesize\ttfamily void Graph\+::\+Add\+Series (\begin{DoxyParamCaption}\item[{QLine\+Series $\ast$}]{series }\end{DoxyParamCaption})}
+
+Add temperature data to an existing set \mbox{\Hypertarget{class_graph_a2c4511061b65dd9dfd346f874fea7823}\label{class_graph_a2c4511061b65dd9dfd346f874fea7823}} 
+\index{Graph@{Graph}!on\_save\_button\_clicked@{on\_save\_button\_clicked}}
+\index{on\_save\_button\_clicked@{on\_save\_button\_clicked}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{on\_save\_button\_clicked}{on\_save\_button\_clicked}}
+{\footnotesize\ttfamily void Graph\+::on\+\_\+save\+\_\+button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Save current plot as $\ast$.png \mbox{\Hypertarget{class_graph_a52556a6e51461ae0a81ea92886aab374}\label{class_graph_a52556a6e51461ae0a81ea92886aab374}} 
+\index{Graph@{Graph}!SetSeries@{SetSeries}}
+\index{SetSeries@{SetSeries}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{SetSeries()}{SetSeries()}}
+{\footnotesize\ttfamily void Graph\+::\+Set\+Series (\begin{DoxyParamCaption}\item[{QLine\+Series $\ast$}]{series }\end{DoxyParamCaption})}
+
+Clear dataset and add new temperature data 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+graph.\+h\item 
+graph.\+cpp\end{DoxyCompactItemize}

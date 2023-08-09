@@ -1,0 +1,41 @@
+\hypertarget{graph_8h_source}{}\doxysection{graph.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GRAPH\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GRAPH\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QtCharts>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QPixmap>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QSqlTableModel>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graph}{Graph}};}
+\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graph}{Graph}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_graph}{Graph}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_graph}{\string~Graph}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a52963bd87f7a31626da0e78dd6109e72}{AddSeries}}(QLineSeries\ *series);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a52556a6e51461ae0a81ea92886aab374}{SetSeries}}(QLineSeries\ *series);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a2c4511061b65dd9dfd346f874fea7823}{on\_save\_button\_clicked}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ QLineSeries\ *series\_;}
+\DoxyCodeLine{00035\ \ \ \ \ QChart\ *chart\_;}
+\DoxyCodeLine{00036\ \ \ \ \ QChartView\ *chart\_view\_;}
+\DoxyCodeLine{00037\ \ \ \ \ Ui::Graph\ *ui;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GRAPH\_H}}
+
+\end{DoxyCode}

@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
     // setup graph & database
     graph_ = new Graph();
     database_ = new Database(graph_);
+    dialog_ = new Dialog(database_->GetLatestTemp());
+    ui->label->setText("Wait temperature\n from serial");
     //this->setAttribute(Qt::WA_DeleteOnClose);
 }
 
@@ -36,8 +38,10 @@ void MainWindow::serial_receive()
 {
     QByteArray ba;
     ba = serial_->readAll();
-    ui->label->setText("Temperature: " + ba);
-    //database->AddNewValue(ba.toFloat()); // FOR NOW
+    QString s_t = QString(ba);
+    ui->label->setText("Temperature: " + s_t);
+    database_->AddNewValue(s_t);
+    dialog_->UpdateServerData(s_t);
     qDebug()<<ba;
 }
 
@@ -54,5 +58,5 @@ void MainWindow::on_db_button_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    database_->LoadFromDB();
+    dialog_->show();
 }

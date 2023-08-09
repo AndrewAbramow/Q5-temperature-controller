@@ -1,0 +1,112 @@
+\hypertarget{class_main_window}{}\doxysection{Main\+Window Class Reference}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d}} 
+{\bfseries Main\+Window} (QWidget $\ast$parent=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a9c40262d102a243d70748371a45752f4}\label{class_main_window_a9c40262d102a243d70748371a45752f4}} 
+int {\bfseries t} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a928ac57bb2e22107aab126a18d22e5f0}{serial\+\_\+receive}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_aea2a4fe4b7326214987c9efaeb9550b0}{on\+\_\+chart\+\_\+button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a81833e19053b7c30db07f639c7793e21}{on\+\_\+db\+\_\+button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a4de79c63c7fa0b8d7c468ac71f20be81}{on\+\_\+push\+Button\+\_\+clicked}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\label{class_main_window_a35466a70ed47252a0191168126a352a5}} 
+Ui\+::\+Main\+Window $\ast$ {\bfseries ui}
+\item 
+\mbox{\hyperlink{class_graph}{Graph}} $\ast$ \mbox{\hyperlink{class_main_window_a7773d219479e9c6c82cb4546039ec2f2}{graph\+\_\+}}
+\item 
+\mbox{\hyperlink{class_database}{Database}} $\ast$ \mbox{\hyperlink{class_main_window_ab2a0cb1b405f45fcc0e159b0e8d5068a}{database\+\_\+}}
+\item 
+QSerial\+Port $\ast$ \mbox{\hyperlink{class_main_window_a7a9f31b506517520f8f177d81127d26f}{serial\+\_\+}}
+\item 
+\mbox{\hyperlink{class_dialog}{Dialog}} $\ast$ \mbox{\hyperlink{class_main_window_a01a9ceb294377d8ead91102bf000d083}{dialog\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the control panel for the entire application 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_window_aea2a4fe4b7326214987c9efaeb9550b0}\label{class_main_window_aea2a4fe4b7326214987c9efaeb9550b0}} 
+\index{MainWindow@{MainWindow}!on\_chart\_button\_clicked@{on\_chart\_button\_clicked}}
+\index{on\_chart\_button\_clicked@{on\_chart\_button\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_chart\_button\_clicked}{on\_chart\_button\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+chart\+\_\+button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+graph button handler \mbox{\Hypertarget{class_main_window_a81833e19053b7c30db07f639c7793e21}\label{class_main_window_a81833e19053b7c30db07f639c7793e21}} 
+\index{MainWindow@{MainWindow}!on\_db\_button\_clicked@{on\_db\_button\_clicked}}
+\index{on\_db\_button\_clicked@{on\_db\_button\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_db\_button\_clicked}{on\_db\_button\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+db\+\_\+button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+database button handler \mbox{\Hypertarget{class_main_window_a4de79c63c7fa0b8d7c468ac71f20be81}\label{class_main_window_a4de79c63c7fa0b8d7c468ac71f20be81}} 
+\index{MainWindow@{MainWindow}!on\_pushButton\_clicked@{on\_pushButton\_clicked}}
+\index{on\_pushButton\_clicked@{on\_pushButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_clicked}{on\_pushButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+start server button handler \mbox{\Hypertarget{class_main_window_a928ac57bb2e22107aab126a18d22e5f0}\label{class_main_window_a928ac57bb2e22107aab126a18d22e5f0}} 
+\index{MainWindow@{MainWindow}!serial\_receive@{serial\_receive}}
+\index{serial\_receive@{serial\_receive}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{serial\_receive}{serial\_receive}}
+{\footnotesize\ttfamily void Main\+Window\+::serial\+\_\+receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Temperature data comes through serial 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_main_window_ab2a0cb1b405f45fcc0e159b0e8d5068a}\label{class_main_window_ab2a0cb1b405f45fcc0e159b0e8d5068a}} 
+\index{MainWindow@{MainWindow}!database\_@{database\_}}
+\index{database\_@{database\_}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{database\_}{database\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_database}{Database}}$\ast$ Main\+Window\+::database\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+pointer to database object \mbox{\Hypertarget{class_main_window_a01a9ceb294377d8ead91102bf000d083}\label{class_main_window_a01a9ceb294377d8ead91102bf000d083}} 
+\index{MainWindow@{MainWindow}!dialog\_@{dialog\_}}
+\index{dialog\_@{dialog\_}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{dialog\_}{dialog\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dialog}{Dialog}}$\ast$ Main\+Window\+::dialog\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+pointer to server object \mbox{\Hypertarget{class_main_window_a7773d219479e9c6c82cb4546039ec2f2}\label{class_main_window_a7773d219479e9c6c82cb4546039ec2f2}} 
+\index{MainWindow@{MainWindow}!graph\_@{graph\_}}
+\index{graph\_@{graph\_}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{graph\_}{graph\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}}$\ast$ Main\+Window\+::graph\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+pointer to graph object \mbox{\Hypertarget{class_main_window_a7a9f31b506517520f8f177d81127d26f}\label{class_main_window_a7a9f31b506517520f8f177d81127d26f}} 
+\index{MainWindow@{MainWindow}!serial\_@{serial\_}}
+\index{serial\_@{serial\_}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{serial\_}{serial\_}}
+{\footnotesize\ttfamily QSerial\+Port$\ast$ Main\+Window\+::serial\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+pointer to serial object 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\+h\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}

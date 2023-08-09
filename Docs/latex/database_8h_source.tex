@@ -1,0 +1,76 @@
+\hypertarget{database_8h_source}{}\doxysection{database.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DATABASE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DATABASE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QtCharts>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QSqlDatabase>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QSqlQuery>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QStandardItem>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QStandardItemModel>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QSqlTableModel>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QTextStreamManipulator>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}graph.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_database}{Database}};}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_database}{Database}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_database}{Database}}(\mbox{\hyperlink{class_graph}{Graph}}\ *graph,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_database}{\string~Database}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_database_ac3ffcb93bcb3c6e856ae0de039a7d0da}{AddNewValue}}(QString\ value);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ QLineSeries*\ \mbox{\hyperlink{class_database_afed8fe2d90951f94d40acfbb320bd5b3}{LoadFromDB}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_database_a4880b2fe48858fafaacfe8095add1fd9}{SetRange}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \ \ \ QString\ \mbox{\hyperlink{class_database_a4c07242f8a6bc7735f613fce917543fd}{GetLatestTemp}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_database_aa553ce6468b7a496aacda30341db7f11}{on\_add\_row\_clicked}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_database_ad6daab078f92bede5d8796dcab4a0855}{on\_delete\_row\_clicked}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_database_ad8f8d8a02264c404ff2926f952f5ef03}{on\_tableView\_clicked}}(\textcolor{keyword}{const}\ QModelIndex\ \&index);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_database_a8b199f77221778b30e95c5bf3628971d}{on\_currrent\_range\_begin\_valueChanged}}(\textcolor{keywordtype}{int}\ arg1);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_database_a9a8daf56efb4a5f8736e18d421d7a11c}{on\_current\_range\_end\_valueChanged}}(\textcolor{keywordtype}{int}\ arg1);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_database_ad2bd6ae71bd29cfc394bdb94f1839176}{on\_save\_csv\_clicked}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00070\ \ \ \ \ Ui::Database\ *ui;}
+\DoxyCodeLine{00071\ \ \ \ \ QSqlDatabase\ db\_;}
+\DoxyCodeLine{00072\ \ \ \ \ QSqlQuery\ *query\_;}
+\DoxyCodeLine{00073\ \ \ \ \ QSqlTableModel\ *model\_;}
+\DoxyCodeLine{00074\ \ \ \ \ QStandardItemModel\ *model\_std\_;}
+\DoxyCodeLine{00075\ \ \ \ \ QStandardItem\ *item\_;}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ *graph\_;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_database_ad528fe82117a144f1bdf18e8757b0a22}{current\_range\_begin\_}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_database_ab821a5725861bc15f0a6cdd54f21b8cf}{current\_range\_end\_}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_database_a834d89b1ba0174b15c900204a1636ef7}{row\_}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_database_aa96179a1449a23eaf6d86ef2d8b48689}{n\_}};}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DATABASE\_H}}
+
+\end{DoxyCode}
