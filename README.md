@@ -3,16 +3,16 @@
 The application communicates with the Arduino board through the serial port to read the temperature and write the state of the executable objects.
 
 ## Features
-The read data can be visualized in the form of:
+### The read data can be visualized in the form of:
 ![Alt text](Docs/graph.png)
 * color chart,
 ![Alt text](Docs/database.png)
 * table
-The read data can be saved as:
+### The read data can be saved as:
 * .png 
 * .csv
+### The read data can be accessed from the standard fortune server client.
 ![Alt text](Docs/server.png) 
-The read data can be accessed from the standard fortune server client.
 
 ## Requirements 
 * CMake
