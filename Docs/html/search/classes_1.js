@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fortuneserver_40',['FortuneServer',['../classFortuneServer.html',1,'']]],
-  ['fortunethread_41',['FortuneThread',['../classFortuneThread.html',1,'']]]
+  ['fortuneserver_41',['FortuneServer',['../classFortuneServer.html',1,'']]],
+  ['fortunethread_42',['FortuneThread',['../classFortuneThread.html',1,'']]]
 ];
