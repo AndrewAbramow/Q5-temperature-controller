@@ -89,5 +89,11 @@ private:
 
     /*! pointer to server object */
     Dialog *dialog_;
+    
+    /*! ON command */
+    QByteArray on;
+    
+    /*! OFF command */
+    QByteArray off;
 };
 #endif // MAINWINDOW_H
