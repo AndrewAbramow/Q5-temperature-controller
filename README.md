@@ -27,7 +27,7 @@ The application communicates with the Arduino board through the serial port to r
 The PC running the application connects via USB cable to an already programmed Arduino board with a temperature sensor (BMP180) to start working.
 
 ## Useful Resources
-* [Fortune client](https://doc.qt.io/qt-6/qtnetwork-fortuneclient-example.html/)
+* [Fortune client](https://doc.qt.io/qt-6/qtnetwork-fortuneclient-example.html)
 * [BMP180 Datasheet](https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf)
 
 ## Docs
