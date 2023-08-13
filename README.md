@@ -18,6 +18,10 @@ The application communicates with the Arduino board through the serial port to r
 ### The read data can be accessed from the standard fortune server client.
 ![Alt text](Docs/server.png) 
 
+## Project goal
+
+Designing an application template for smart home or factory automation
+
 ## Requirements 
 * CMake
 * Qt5 with: Charts, Sql, SerialPort, Concurrent, Network
